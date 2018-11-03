@@ -1,0 +1,1 @@
+`imreadeval` is a package to evaluate the performance of various python `imread` functions and packages.
