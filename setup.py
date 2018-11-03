@@ -2,6 +2,7 @@
 #! -*- coding: utf-8 -*-
 
 import io
+import setuptools
 from setuptools import setup
 
 with io.open("README.md", "r", encoding='utf-8') as fh:
