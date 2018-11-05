@@ -78,15 +78,26 @@ default_number = 10
 optimum = imread_eval(filenames = filenames, times=default_number)
 
 # Proxy
-if optimum == "Pillow":
-    from PIL import Image
-    def imread(filename):
-        return Image.open(filename).load()
-elif optimum == "OpenCV":
-    from cv2 import imread
-elif optimum == "Matplotlib":
-    from matplotlib.image import imread
-else:
-    from PIL import Image
-    def imread(filename):
-        return Image.open(filename).load()
+def _import_optimum_imread():
+    def pillow_imread():
+        from PIL import Image
+        def imread(filename):
+            return Image.open(filename).load()
+        return imread
+
+    def opencv_imread():
+        import cv2
+        return cv2.imread
+
+    def matplotlib_imread():
+        import matplotlib
+        return matplotlib.image.imread
+
+    proxies = {
+        "Pillow": pillow_imread,
+        "OpenCV": opencv_imread,
+        "Matplotlib": matplotlib_imread
+    }
+    return proxies.get(optimum, lambda: pillow_imread)()
+
+imread = _import_optimum_imread()
