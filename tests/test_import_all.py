@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from imreadeval import *
 
-def test_import_imread():
+def test_imread():
 	import os
-	import imreadeval
 	test_image_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
 	filename = os.path.join(test_image_directory, r'squirrel.jpg')
 	try:
-		im = imreadeval.imread(filename)
+		im = imread(filename)
 	except Exception as e:
 		assert False
 		return
 	assert True
 
-def test_import_imread_eval():
-	import imreadeval
+def test_imread_eval():
 	try:
-		imreadeval.imread_eval()
+		imread_eval()
 	except Exception as e:
 		assert False
 		return

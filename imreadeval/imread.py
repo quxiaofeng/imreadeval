@@ -49,8 +49,8 @@ if not os.path.exists(test_image_directory):
         'This is most likely because the test data is not installed. '
         'You may need to install pysss from source to get the '
         'test data.')
-filenames = [os.path.join(test_image_directory, "squirrel.jpg"),
-             os.path.join(test_image_directory, "clouds.png")]
+filenames = [os.path.join(test_image_directory, r'squirrel.jpg'),
+             os.path.join(test_image_directory, r'clouds.png')]
 
 def imread_eval(filenames=filenames, times=5):
     speeds={}
