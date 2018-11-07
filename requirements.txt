@@ -1,5 +1,7 @@
-Pillow
+pillow
+opencv-python
 matplotlib
 imageio
+scipy
 scikit-image
 pytest
