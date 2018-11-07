@@ -52,7 +52,7 @@ if not os.path.exists(test_image_directory):
 filenames = [os.path.join(test_image_directory, "squirrel.jpg"),
              os.path.join(test_image_directory, "clouds.png")]
 
-def imread_eval(filenames=filenames, times=100):
+def imread_eval(filenames=filenames, times=5):
     speeds={}
     logging.info('\t`imread` performance test:')
     for this_option in imread_options:
