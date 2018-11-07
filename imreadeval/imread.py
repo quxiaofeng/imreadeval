@@ -27,9 +27,9 @@ imread_options = [
         "test_fun": "image=imread(\"{filename}\"); x=image[3,3]",
     },
     {
-        "name": "SciPy",
-        "import_name": "scipy",
-        "setup": "from scipy.misc import imread",
+        "name": "imageio",
+        "import_name": "imageio",
+        "setup": "from imageio import imread",
         "test_fun": "image=imread(\"{filename}\"); x=image[3,3]",
     },
     {
@@ -78,7 +78,7 @@ default_number = 10
 optimum = imread_eval(filenames = filenames, times=default_number)
 
 # Proxy
-def _import_optimum_imread():
+def import_imread_from(pacakge_name="Pillow"):
     def pillow_imread():
         from PIL import Image
         def imread(filename):
@@ -98,6 +98,6 @@ def _import_optimum_imread():
         "OpenCV": opencv_imread,
         "Matplotlib": matplotlib_imread
     }
-    return proxies.get(optimum, lambda: pillow_imread)()
+    return proxies.get(pacakge_name, lambda: pillow_imread)()
 
-imread = _import_optimum_imread()
+imread = import_imread_from(optimum)
