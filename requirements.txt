@@ -1,0 +1,5 @@
+Pillow
+matplotlib
+imageio
+scikit-image
+pytest
