@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 #! -*- coding: utf-8 -*-
 
+"""
+imread evaluation
+"""
+__author__ = 'QU Xiaofeng'
+
 import io
 import setuptools
 from setuptools import setup
@@ -10,15 +15,24 @@ with io.open("README.md", "r", encoding='utf-8') as fh:
 
 setup(
     name='imreadeval',
-    version='0.1',
+    version='0.1.1',
     description='An evaluation to python imread functions',
     long_description=long_description,
     long_description_content_type='text/markdown',
     classifiers=[
         'Development Status :: 1 - Planning',
-        'License :: OSI Approved :: Apache Software License',
+        'Environment :: Console',
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Natural Language :: Chinese (Simplified)',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 2.7',
-        'Topic :: Multimedia :: Graphics :: Editors :: Raster-Based',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Topic :: Scientific/Engineering :: Image Recognition',
+        'Topic :: Scientific/Engineering :: Artificial Intelligence'
     ],
     url='http://github.com/quxiaofeng/imreadeval',
     author='QU Xiaofeng',
@@ -26,10 +40,10 @@ setup(
     install_requires=[
           'matplotlib',
           'Pillow',
-          'scipy',
+          'imageio',
           'scikit-image',
       ],
-    license='MIT',
+    license='MIT license, Copyright (c) 2018 by QU Xiaofeng, Lumi United Technology',
     package=setuptools.find_packages(),
     include_package_data=True,
     zip_safe=False
