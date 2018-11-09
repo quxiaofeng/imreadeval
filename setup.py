@@ -47,7 +47,7 @@ setup(
       ],
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
-    license='MIT license, Copyright (c) 2018 by QU Xiaofeng, Lumi United Technology',
+    license='MIT license, Copyright (c) 2018 by QU Xiaofeng, Lumi United Technology, Tsinghua University',
     package=setuptools.find_packages(),
     include_package_data=True,
     zip_safe=False
