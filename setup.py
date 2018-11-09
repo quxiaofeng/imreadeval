@@ -6,17 +6,14 @@ imread evaluation
 """
 from setuptools import setup
 
-__author__ = 'QU Xiaofeng'
-
 import io
 import setuptools
 
 with io.open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
-setup(
-    name='imreadeval',
-    version='0.1.2',
+setup(name='imreadeval',
+    version='0.1.3',
     description='An evaluation to python imread functions',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -47,9 +44,9 @@ setup(
       ],
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
-    license='MIT license, Copyright (c) 2018 by QU Xiaofeng, Lumi United Technology, Tsinghua University',
+    license='MIT license, Copyright (c) 2018 QU Xiaofeng',
     package=setuptools.find_packages(),
     include_package_data=True,
     zip_safe=False
-)
+    )
 
