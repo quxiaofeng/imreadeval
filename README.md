@@ -6,13 +6,13 @@
 
 PS. If you use `anaconda`, please install dependencies before `pip install`. The default dependency install is `pip` based.
 
-## Dependencies or Packages Tested
+## Packages Tested
 
 - Pillow
 - OpenCV
 - Matplotlib
-- SciPy
-- SciKit-Image
+- imageio (descendent of `scipy.io.imread`, which is deprecated)
+- SciKit-Image (depend on SciPy)
 
 ## Usage
 
@@ -27,6 +27,7 @@ or just import a fastest `imread` function by
 or try to evaluate different `imread` functions using YOUR OWN IMAGES
 
 `from imreadeval import imread_eval`
+
 `optimum_package_name = imread_eval(filenames = ['filename1.jpg', 'filename2.png'], times = 1000)`
 
 ## Develop
