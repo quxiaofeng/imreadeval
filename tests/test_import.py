@@ -3,7 +3,7 @@
 
 def test_import_imread():
 	import os
-	import imreadeval
+	import ..imreadeval
 	test_image_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
 	filename = os.path.join(test_image_directory, r'squirrel.jpg')
 	try:
@@ -14,7 +14,7 @@ def test_import_imread():
 	assert True
 
 def test_import_imread_eval():
-	import imreadeval
+	import ..imreadeval
 	try:
 		imreadeval.imread_eval()
 	except Exception as e:

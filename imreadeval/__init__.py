@@ -9,4 +9,8 @@ __author__ = 'QU Xiaofeng'
 
 from .imread import imread, imread_eval, import_imread_from
 
-__all__ = ["imread", "imread_eval", "import_imread_from"]
+__all__ = [
+	'imread',
+	'imread_eval',
+	'import_imread_from'
+	]
