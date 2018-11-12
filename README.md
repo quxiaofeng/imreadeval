@@ -1,4 +1,4 @@
-`imreadeval` is a package to evaluate the performance of various python `imread` functions and packages.
+`imreadeval` is a package to evaluate the performance of various python `imread` functions from different packages.
 
 ## Install
 
