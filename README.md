@@ -6,7 +6,7 @@
 
 PS. If you use `anaconda`, please install dependencies before `pip install`. The default dependency install is `pip` based.
 
-## Packages Tested
+## Packages Evaluated
 
 - Pillow
 - OpenCV
