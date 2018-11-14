@@ -39,7 +39,7 @@ setup(name='imreadeval',
     author='QU Xiaofeng',
     author_email='xiaofeng.qu@aqara.com',
     install_requires=[
-          'Pillow'
+          'Pillow',
           'pytest'
       ],
     setup_requires=["pytest-runner"],
