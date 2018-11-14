@@ -48,12 +48,12 @@ imread_options = [
 
 # Test
 # Check that the test directories exist
-test_image_directory = os.path.join(os.path.dirname(__file__), '..', 'images')
+test_image_directory = os.path.join(os.path.dirname(__file__), 'images')
 if not os.path.exists(test_image_directory):
     raise IOError(
         'The test image directory does not exist. '
         'This is most likely because the test data is not installed. '
-        'You may need to install pysss from source to get the '
+        'You may need to install imreadeval from source to get the '
         'test data.')
 filenames = [os.path.join(test_image_directory, 'squirrel.jpg'),
              os.path.join(test_image_directory, 'clouds.png')]
