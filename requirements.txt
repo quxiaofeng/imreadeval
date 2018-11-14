@@ -4,4 +4,5 @@ matplotlib
 imageio
 scipy
 scikit-image
+imread
 pytest

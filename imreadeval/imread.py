@@ -99,10 +99,15 @@ def import_imread_from(pacakge_name="Pillow"):
         import matplotlib
         return matplotlib.image.imread
 
+    def imread_imread():
+        import imread
+        return imread.imread
+
     proxies = {
         "Pillow": pillow_imread,
         "OpenCV": opencv_imread,
-        "Matplotlib": matplotlib_imread
+        "Matplotlib": matplotlib_imread,
+        "imread": imread_imread
     }
     return proxies.get(pacakge_name, lambda: pillow_imread)()
 
