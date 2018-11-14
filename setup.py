@@ -13,7 +13,7 @@ with io.open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(name='imreadeval',
-    version='0.2.0',
+    version='0.2.1',
     description='An evaluation to python imread functions',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -39,12 +39,7 @@ setup(name='imreadeval',
     author='QU Xiaofeng',
     author_email='xiaofeng.qu@aqara.com',
     install_requires=[
-          'Pillow',
-          'opencv-python',
-          'matplotlib',
-          'imageio',
-          'scipy',
-          'scikit-image',
+          'Pillow'
           'pytest'
       ],
     setup_requires=["pytest-runner"],
