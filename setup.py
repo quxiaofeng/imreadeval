@@ -13,7 +13,7 @@ with io.open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(name='imreadeval',
-    version='0.2.1',
+    version='0.2.2',
     description='An evaluation to python imread functions',
     long_description=long_description,
     long_description_content_type='text/markdown',
