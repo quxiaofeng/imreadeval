@@ -10,33 +10,39 @@ import os
 imread_options = [
     {
         "name": "Pillow",
-        "import_name": "PIL",
+        "pip_import_package_name": "PIL",
         "setup": "from PIL import Image",
-        "test_fun": "image=Image.open(\"{filename}\").load(); x=image[3,3]",
+        "test_fun": 'image=Image.open("{filename}").load(); x=image[3,3]',
     },
     {
         "name": "OpenCV",
-        "import_name": "cv2",
+        "pip_import_package_name": "cv2",
         "setup": "from cv2 import imread",
-        "test_fun": "image=imread(\"{filename}\"); x=image[3,3]",
+        "test_fun": 'image=imread("{filename}"); x=image[3,3]',
     },
     {
         "name": "Matplotlib",
-        "import_name": "matplotlib",
+        "pip_import_package_name": "matplotlib",
         "setup": "from matplotlib.image import imread",
-        "test_fun": "image=imread(\"{filename}\"); x=image[3,3]",
+        "test_fun": 'image=imread("{filename}"); x=image[3,3]',
     },
     {
         "name": "imageio",
-        "import_name": "imageio",
+        "pip_import_package_name": "imageio",
         "setup": "from imageio import imread",
-        "test_fun": "image=imread(\"{filename}\"); x=image[3,3]",
+        "test_fun": 'image=imread("{filename}"); x=image[3,3]',
     },
     {
         "name": "SciKit-Image",
-        "import_name": "skimage",
+        "pip_import_package_name": "skimage",
         "setup": "from skimage.io import imread",
-        "test_fun": "image=imread(\"{filename}\"); x=image[3,3]",
+        "test_fun": 'image=imread("{filename}"); x=image[3,3]',
+    },
+    {
+        "name": "imread",
+        "pip_import_package_name": "imread",
+        "setup": "from imread import imread",
+        "test_fun": 'image=imread("{filename}"); x=image[3,3]',
     }
 ]
 
@@ -49,15 +55,15 @@ if not os.path.exists(test_image_directory):
         'This is most likely because the test data is not installed. '
         'You may need to install pysss from source to get the '
         'test data.')
-filenames = [os.path.join(test_image_directory, r'squirrel.jpg'),
-             os.path.join(test_image_directory, r'clouds.png')]
+filenames = [os.path.join(test_image_directory, 'squirrel.jpg'),
+             os.path.join(test_image_directory, 'clouds.png')]
 
 def imread_eval(filenames=filenames, times=5):
     speeds={}
     logging.info('\t`imread` performance test:')
     for this_option in imread_options:
         try:
-            __import__(this_option["import_name"])
+            __import__(this_option["pip_import_package_name"])
         except ImportError:
             logging.info('\t\t%s is not installed.', this_option["name"])
             continue
