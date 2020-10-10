@@ -8,23 +8,43 @@ PS. If you use `anaconda`, please install dependencies before `pip install`. The
 
 ## Packages Evaluated
 
-- Pillow
-- OpenCV
-- Matplotlib
-- imageio (descendent of `scipy.io.imread`, which is deprecated)
-- SciKit-Image (depend on SciPy)
+- Pillow https://github.com/python-pillow/Pillow
+- OpenCV https://github.com/opencv/opencv
+- Matplotlib https://github.com/matplotlib/matplotlib
+- imageio (descendent of `scipy.io.imread`, which is deprecated) https://github.com/imageio/imageio
+- SciKit-Image (depend on SciPy) https://github.com/scikit-image/scikit-image
+- imread https://github.com/luispedro/imread
 
 ## Usage
 
-Just evaluate 
+Just evaluate `import imreadeval`, then all imread packages installed will be tested, and the fastest one shows.
 
-`import imreadeval`
+> In [1]: import imreadeval
+> INFO:root:      `imread` performance test:
+> INFO:root:              Pillow time: 0.8008584999999995.
+> INFO:root:              OpenCV is not installed.
+> INFO:root:              Matplotlib time: 0.8844109000000007.
+> INFO:root:              imageio time: 0.9442649999999997.
+> INFO:root:              SciKit-Image time: 0.9424957000000003.
+> INFO:root:              imread is not installed.
+> INFO:root:                      Pillow is the fastest.
 
-or just import a fastest `imread` function by
+Or just import a fastest `imread` function by `from imreadeval import imread`.
 
-`from imreadeval import imread`
+> In [1]: import imreadeval
+> INFO:root:      `imread` performance test:
+> INFO:root:              Pillow time: 0.8008584999999995.
+> INFO:root:              OpenCV is not installed.
+> INFO:root:              Matplotlib time: 0.8844109000000007.
+> INFO:root:              imageio time: 0.9442649999999997.
+> INFO:root:              SciKit-Image time: 0.9424957000000003.
+> INFO:root:              imread is not installed.
+> INFO:root:                      Pillow is the fastest.
+> 
+> In [2]: x = imread('imreadeval/images/clouds.png')
+> 
 
-or try to evaluate different `imread` functions using YOUR OWN IMAGES
+or try to evaluate different `imread` functions using YOUR OWN IMAGES by
 
 `from imreadeval import imread_eval`
 
