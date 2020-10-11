@@ -6,6 +6,8 @@
 
 PS. If you use `anaconda`, please install dependencies before `pip install`. The default dependency install is `pip` based.
 
+Or just clone this repo, if you want to use updated version.
+
 ## Packages Evaluated
 
 - Pillow https://github.com/python-pillow/Pillow
