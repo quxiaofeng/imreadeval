@@ -88,7 +88,7 @@ def import_imread_from(pacakge_name="Pillow"):
     def pillow_imread():
         from PIL import Image
         def imread(filename):
-            return Image.open(filename).load()
+            return Image.open(filename)
         return imread
 
     def opencv_imread():
