@@ -58,4 +58,4 @@ or try to evaluate different `imread` functions using YOUR OWN IMAGES by
 
 ## Acknowledgement
 
-This package is done during my work hours in both [LUMI United](https://www.aqara.com/en/home.html) and [Tsinghua University, Graduate School at Shenzhen](http://www.sz.tsinghua.edu.cn/enhtml/index.html). Thanks for the kind arrangement.
+This package is done in [Tsinghua University, Shenzhen International Graduate School](https://www.sigs.tsinghua.edu.cn/english/).
